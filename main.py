@@ -1,9 +1,10 @@
 import requests
+import os
 
 STOCK = "TSLA"
 COMPANY_NAME = "Tesla Inc"
-API_KEY = "4YD0A964JFZ65C8M"
-NEWS_API_KEY = "bef1f7fb60eb4bcc8f8483e300c02c81"
+API_KEY = os.environ.get("STOCK_API")
+NEWS_API_KEY = os.environ.get("NEWS_API")
 
 
 stock_params = {
